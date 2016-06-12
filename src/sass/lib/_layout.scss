@@ -1,0 +1,12 @@
+$susy: (
+	container: 1180px,
+	gutter-position: inside-static,
+	column-width: 80px,
+	columns: 12,
+	gutters: 1/2,
+	debug: (
+		image: show,
+		color: rgba(#cb3030, .25),
+		inspect: true,
+	),
+);

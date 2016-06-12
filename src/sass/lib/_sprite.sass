@@ -1,0 +1,63 @@
+$icons: (0:0)
+$icons: map-merge($icons,(email: (X: 0px, Y:-24px, W: 20px, H: 18px, TW: 44px, TH: 42px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(name: (X: -24px, Y:0px, W: 20px, H: 19px, TW: 44px, TH: 42px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(subject: (X: 0px, Y:0px, W: 20px, H: 20px, TW: 44px, TH: 42px, IMG: '../img/icons.png')))
+
+
+// Gets an attribute from the sass map
+@function icon-attr($icon, $attr)
+	$icon: map-get($icons, $icon)
+	@return map-get($icon, $attr)
+
+@mixin sprite($iconName)
+	background-image: url(icon-attr($iconName, IMG))
+	width: icon-attr($iconName, W)
+	height: icon-attr($iconName, H)
+	background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+@mixin sprite-position($iconName)
+	background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+@mixin sprite-retina($iconName)
+	background-image: url(icon-attr($iconName, IMG))
+	$width: icon-attr($iconName, W)
+	$height: icon-attr($iconName, H)
+	width: $width/2
+	height: $height/2
+	$x: icon-attr($iconName, X)
+	$y: icon-attr($iconName, Y)
+	background-position: $x/2 $y/2
+	$tw: icon-attr($iconName, TW) 	
+	$th: icon-attr($iconName, TH)
+	background-size: $tw/2 $th/2
+@mixin sprite-position-retina($iconName)
+	$x: icon-attr($iconName, X)
+	$y: icon-attr($iconName, Y)
+	background-position: $x/2 $y/2
+
+
+@mixin s($i)
+	+sprite($i)
+@mixin sp($i)
+	+sprite-position($i)
+@mixin sr($i)
+	+sprite-retina($i)
+@mixin spr($i)
+	+sprite-position-retina($i)
+
+.icon-email
+	width: 20px
+	height: 18px
+	background-image: url('../img/icons.png')
+	background-position: 0px -24px
+	background-size: 44px 42px
+.icon-name
+	width: 20px
+	height: 19px
+	background-image: url('../img/icons.png')
+	background-position: -24px 0px
+	background-size: 44px 42px
+.icon-subject
+	width: 20px
+	height: 20px
+	background-image: url('../img/icons.png')
+	background-position: 0px 0px
+	background-size: 44px 42px

@@ -1,0 +1,241 @@
+// fonts
+$default-fonts: Arial, sans-serif
+=mon
+	font-family: 'Montserrat', $default-fonts
+	font-weight: 700
+// colors
+$black: #222222
+
+/* ==========================================================================
+	 Main Styles
+	 ========================================================================== */
+a:hover, a:focus
+	text-decoration: none
+a
+	color: inherit
+	text-decoration: none
+svg
+	width: 100%
+	height: 100%
+.is-hidden
+	display: none
+.row
+	+pie-clearfix
+// *
+// 	+selection
+// 		color: #fff
+// 		background-color: $red
+body
+	min-width: 320px
+	font-size: 16px
+	color: #333
+	font-family: Arial
+	line-height: 1.6
+	background-color: #00c2cc
+.wrapper
+	overflow: hidden
+	margin: 0 auto
+	padding-bottom: 132px
+	width: 1144px
+	min-height: 100%
+	transition: all 0.3s
+.wrap
+	margin-left: auto
+	margin-right: auto
+	padding-left: 98px
+	padding-right: 98px
+	width: 948px
+
+/* ==========================================================================
+	 Footer
+	 ========================================================================== */
+.footer
+	margin-left: auto
+	margin-right: auto
+	width: 1144px
+	padding-left: 98px
+	padding-right: 98px
+	margin-top: -132px
+	.logo
+		float: left
+		&__img
+		vertical-align: middle
+	&-nav
+		float: right
+		margin-top: 15px
+		margin-right: 88px
+		&__link
+			display: inline-block
+			margin-left: 25px
+			margin-right: -4px
+	&__in
+		padding-top: 40px
+		padding-left: 98px
+		padding-right: 16px
+		height: 132px
+		background-color: #eeeeee
+		+pie-clearfix
+
+
+/* ==========================================================================
+	 Main
+	 ========================================================================== */
+.aside
+	float: left
+	padding-top: 40px
+	width: 98px
+	padding-right: 32px
+	color: #ffffff
+	text-align: right
+	line-height: 2
+.nav
+	&__link
+		&:hover
+			border-bottom: 1px solid #ffffff
+.header
+	padding-top: 20px
+	background-color: #ffffff
+.title
+	margin-top: 40px
+	padding-left: 98px
+	padding-right: 98px
+	+mon
+	font-size: 48px
+	line-height: 60px
+	color: #020202
+.logo
+	&__link
+		display: inline-block
+	img.logo__img
+		margin-bottom: 0
+		width: auto
+		height: auto
+		vertical-align: bottom
+.main
+	float: left
+	width: 948px
+	background-color: #ffffff
+	img.main__img
+		margin-top: 35px
+		margin-bottom: 0
+	.wrap
+		padding-top: 35px
+	.col-img
+		+pie-clearfix
+		img
+			max-width: 360px
+		&_right
+			img
+				float: right
+				margin-left: 32px
+		&_left
+			img
+				float: left
+				margin-right: 32px
+	p
+		margin-bottom: 40px
+	a
+		color: #429beb
+	a:hover
+		color: #429beb
+		text-decoration: underline
+	img
+		margin-bottom: 40px
+		width: 100%
+		height: auto
+		vertical-align: middle
+.contact
+	position: relative
+	margin-bottom: 100px
+	&__in
+		position: relative
+		z-index: 1
+		padding: 40px 164px 115px
+		background-color: #eee
+		border-radius: 5px
+	&:after
+		content: ''
+		position: absolute
+		left: 66px
+		right: 66px
+		height: 50%
+		bottom: 0
+		border-radius: 5px
+		box-shadow: 0 8px 60px rgba(0, 0, 0, 0.64)
+	&__title
+		margin-bottom: 30px
+		+mon
+		font-size: 42px
+		line-height: 1
+		text-align: center
+		text-transform: uppercase
+.form-contact
+	&__field
+		+pie-clearfix
+		&_center
+			text-align: center
+		& + &
+			margin-top: 18px
+	&__label
+		position: relative
+		z-index: 1
+		float: left
+		padding-top: 14px
+		padding-left: 15px
+		margin-right: -35px
+		.icon
+			display: block
+	&__input
+		float: left
+		padding-left: 45px
+		width: 100%
+		height: 48px
+		font-size: 18px
+		line-height: 48px
+		color: #999999
+		border: 2px solid #ddd
+		border-radius: 5px
+		background-color: #ffffff
+		-webkit-appearance: none
+		+placeholder-color(#999999)
+	&__textarea
+		position: relative
+		float: left
+		padding-left: 45px
+		padding-top: 9px
+		width: 100%
+		height: 210px
+		font-size: 18px
+		line-height: 24px
+		color: #999999
+		background-color: #fff
+		border: 2px solid #ddd
+		border-radius: 5px
+		-webkit-appearance: none
+		resize: none
+		&:before
+			content: ''
+			position: absolute
+			top: 15px
+			left: 15px
+			width: 10px
+			height: 10px
+			background-color: red
+		+placeholder-color(#999999)
+	&__submit
+		display: inline-block
+		+mon
+		width: 228px
+		height: 60px
+		font-size: 24px
+		line-height: 60px
+		color: #ffffff
+		text-align: center
+		background-color: #69e000
+		border-radius: 5px
+
+/* ==========================================================================
+	 Other Styles
+	 ========================================================================== */
+.clearfix
+	+pie-clearfix
